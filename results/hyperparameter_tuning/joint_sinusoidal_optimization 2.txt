@@ -1,0 +1,39 @@
+JOINT HYPERPARAMETER AND ARCHITECTURE OPTIMIZATION - SINUSOIDAL (PyTorch)
+======================================================================
+
+Methodology: Two-phase per-algorithm optimization
+Phase 1: Coarse grid over parameters and architecture
+Phase 2: Fine architecture search per algorithm with optimal parameters
+
+Overall Best Configuration:
+  Algorithm: LEAPFROG
+  Parameters: {'dt': 0.0001, 'delta_max': 1.0, 'xi': 0.1, 'm': 5}
+  Hidden Units: 30
+  RMSE: 0.2736 ± 0.0068
+
+Per-Algorithm Final Results:
+  1. LEAPFROG: h=30, RMSE=0.2736±0.0068
+      Parameters: {'dt': 0.0001, 'delta_max': 1.0, 'xi': 0.1, 'm': 5}
+      Convergence Epoch: 998.5
+      Convergence Time: 0.618s
+      Total Training Time: 0.62s
+  2. SGD: h=17, RMSE=0.3891±0.1164
+      Parameters: {'lr': 0.1, 'momentum': 0.99}
+      Convergence Epoch: 288.1
+      Convergence Time: 0.080s
+      Total Training Time: 0.09s
+  3. SCG: h=22, RMSE=0.4899±0.0534
+      Parameters: {'sigma': 1e-06, 'lambd': 0.01}
+      Total Training Time: 1.71s
+
+Phase 1 Summary (180 configurations tested):
+   1. LEAPFROG h=30 RMSE=0.2733±0.0086
+   2. LEAPFROG h=25 RMSE=0.2748±0.0034
+   3. LEAPFROG h=30 RMSE=0.2752±0.0045
+   4. LEAPFROG h=25 RMSE=0.2755±0.0048
+   5. LEAPFROG h=25 RMSE=0.2758±0.0058
+   6. LEAPFROG h=25 RMSE=0.2770±0.0022
+   7. LEAPFROG h=30 RMSE=0.2774±0.0037
+   8. LEAPFROG h=30 RMSE=0.2774±0.0034
+   9. LEAPFROG h=30 RMSE=0.2780±0.0017
+  10. LEAPFROG h=25 RMSE=0.2785±0.0016

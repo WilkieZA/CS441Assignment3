@@ -1,0 +1,41 @@
+JOINT HYPERPARAMETER AND ARCHITECTURE OPTIMIZATION - IRIS
+============================================================
+
+Methodology: Two-phase per-algorithm optimization
+Phase 1: Coarse grid over parameters and architecture
+Phase 2: Fine architecture search per algorithm with optimal parameters
+
+Overall Best Configuration:
+  Algorithm: SGD
+  Parameters: {'lr': 0.05, 'momentum': 0.99}
+  Hidden Units: 19
+  Accuracy: 0.9867 ± 0.0267
+
+Per-Algorithm Final Results:
+  1. SGD: h=19, Accuracy=0.9867±0.0267
+      Parameters: {'lr': 0.05, 'momentum': 0.99}
+      Convergence Epoch: 41.1
+      Convergence Time: 0.016s
+      Total Training Time: 0.02s
+  2. LEAPFROG: h=15, Accuracy=0.9800±0.0427
+      Parameters: {'dt': 0.0001, 'delta_max': 1.0, 'xi': 0.1, 'm': 5}
+      Convergence Epoch: 59.9
+      Convergence Time: 0.039s
+      Total Training Time: 0.68s
+  3. SCG: h=6, Accuracy=0.9667±0.0537
+      Parameters: {'sigma': 1e-06, 'lambd': 0.001}
+      Convergence Epoch: 193.5
+      Convergence Time: 0.191s
+      Total Training Time: 0.95s
+
+Phase 1 Summary (180 configurations tested):
+   1. LEAPFROG h=15 Accuracy=0.9933±0.0200
+   2. LEAPFROG h=20 Accuracy=0.9933±0.0200
+   3. LEAPFROG h=25 Accuracy=0.9933±0.0200
+   4. LEAPFROG h=30 Accuracy=0.9933±0.0200
+   5. SGD h=15 Accuracy=0.9867±0.0267
+   6. LEAPFROG h=20 Accuracy=0.9867±0.0400
+   7. LEAPFROG h=30 Accuracy=0.9867±0.0400
+   8. LEAPFROG h=10 Accuracy=0.9867±0.0400
+   9. SGD h=10 Accuracy=0.9800±0.0427
+  10. SGD h=20 Accuracy=0.9800±0.0427

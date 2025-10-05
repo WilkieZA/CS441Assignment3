@@ -1,0 +1,41 @@
+JOINT HYPERPARAMETER AND ARCHITECTURE OPTIMIZATION - GAUSSIAN MIXTURE (PyTorch)
+===========================================================================
+
+Methodology: Two-phase per-algorithm optimization
+Phase 1: Coarse grid over parameters and architecture
+Phase 2: Fine architecture search per algorithm with optimal parameters
+
+Overall Best Configuration:
+  Algorithm: SGD
+  Parameters: {'lr': 0.1, 'momentum': 0.9}
+  Hidden Units: 30
+  RMSE: 0.2244 ± 0.0073
+
+Per-Algorithm Final Results:
+  1. SGD: h=30, RMSE=0.2244±0.0073
+      Parameters: {'lr': 0.1, 'momentum': 0.9}
+      Convergence Epoch: 675.0
+      Convergence Time: 0.197s
+      Total Training Time: 0.25s
+  2. LEAPFROG: h=16, RMSE=0.2260±0.0091
+      Parameters: {'dt': 0.0001, 'delta_max': 0.1, 'xi': 0.1, 'm': 3}
+      Convergence Epoch: 718.3
+      Convergence Time: 0.300s
+      Total Training Time: 0.67s
+  3. SCG: h=23, RMSE=0.2371±0.0122
+      Parameters: {'sigma': 1e-05, 'lambd': 0.001}
+      Convergence Epoch: 814.5
+      Convergence Time: 0.626s
+      Total Training Time: 1.38s
+
+Phase 1 Summary (180 configurations tested):
+   1. LEAPFROG h=20 RMSE=0.2251±0.0078
+   2. SGD h=30 RMSE=0.2253±0.0087
+   3. LEAPFROG h=25 RMSE=0.2254±0.0103
+   4. LEAPFROG h=30 RMSE=0.2255±0.0133
+   5. LEAPFROG h=30 RMSE=0.2258±0.0096
+   6. LEAPFROG h=25 RMSE=0.2260±0.0078
+   7. LEAPFROG h=25 RMSE=0.2260±0.0095
+   8. LEAPFROG h=25 RMSE=0.2262±0.0135
+   9. LEAPFROG h=30 RMSE=0.2265±0.0098
+  10. LEAPFROG h=30 RMSE=0.2268±0.0104

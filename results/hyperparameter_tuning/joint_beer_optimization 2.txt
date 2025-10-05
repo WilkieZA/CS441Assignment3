@@ -1,0 +1,39 @@
+JOINT HYPERPARAMETER AND ARCHITECTURE OPTIMIZATION - BEER
+============================================================
+
+Methodology: Two-phase per-algorithm optimization
+Phase 1: Coarse grid over parameters and architecture
+Phase 2: Fine architecture search per algorithm with optimal parameters
+
+Overall Best Configuration:
+  Algorithm: SGD
+  Parameters: {'lr': 0.05, 'momentum': 0.5}
+  Hidden Units: 18
+  Accuracy: 0.9015 ± 0.0304
+
+Per-Algorithm Final Results:
+  1. SGD: h=18, Accuracy=0.9015±0.0304
+      Parameters: {'lr': 0.05, 'momentum': 0.5}
+      Convergence Epoch: 1400.1
+      Convergence Time: 0.363s
+      Total Training Time: 0.39s
+  2. LEAPFROG: h=34, Accuracy=0.8841±0.0386
+      Parameters: {'dt': 0.0001, 'delta_max': 1.0, 'xi': 0.2, 'm': 3}
+      Convergence Epoch: 48.0
+      Convergence Time: 0.021s
+      Total Training Time: 3.91s
+  3. SCG: h=10, Accuracy=0.6967±0.2158
+      Parameters: {'sigma': 1e-06, 'lambd': 0.001}
+      Total Training Time: 4.94s
+
+Phase 1 Summary (180 configurations tested):
+   1. SGD h=20 Accuracy=0.9015±0.0134
+   2. SGD h=20 Accuracy=0.8976±0.0289
+   3. SGD h=15 Accuracy=0.8975±0.0305
+   4. SGD h=30 Accuracy=0.8975±0.0280
+   5. SGD h=25 Accuracy=0.8957±0.0249
+   6. SGD h=25 Accuracy=0.8938±0.0250
+   7. SGD h=25 Accuracy=0.8938±0.0158
+   8. SGD h=15 Accuracy=0.8918±0.0264
+   9. SGD h=30 Accuracy=0.8918±0.0281
+  10. SGD h=20 Accuracy=0.8900±0.0256

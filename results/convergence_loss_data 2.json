@@ -1,0 +1,86 @@
+{
+  "iris": {
+    "sgd": {
+      "convergence_epoch": 32,
+      "final_loss": 0.12022383883595467
+    },
+    "scg": {
+      "convergence_epoch": 90,
+      "final_loss": 0.13948604464530945
+    },
+    "leapfrog": {
+      "convergence_epoch": 49,
+      "final_loss": 0.2746291048824787
+    }
+  },
+  "titanic": {
+    "sgd": {
+      "convergence_epoch": 474,
+      "final_loss": 0.413279727101326
+    },
+    "scg": {
+      "convergence_epoch": 248,
+      "final_loss": 0.41466474533081055
+    },
+    "leapfrog": {
+      "convergence_epoch": 50,
+      "final_loss": 0.44292733669281004
+    }
+  },
+  "beer": {
+    "sgd": {
+      "convergence_epoch": 1258,
+      "final_loss": 0.288766348361969
+    },
+    "scg": {
+      "convergence_epoch": 334,
+      "final_loss": 0.4127003401517868
+    },
+    "leapfrog": {
+      "convergence_epoch": 43,
+      "final_loss": 0.5732531234622001
+    }
+  },
+  "polynomial": {
+    "sgd": {
+      "convergence_epoch": 195,
+      "final_loss": 0.06913301646709442
+    },
+    "scg": {
+      "convergence_epoch": 170,
+      "final_loss": 0.081393051892519
+    },
+    "leapfrog": {
+      "convergence_epoch": 114,
+      "final_loss": 0.08639458380639553
+    }
+  },
+  "sinusoidal": {
+    "sgd": {
+      "convergence_epoch": 463,
+      "final_loss": 1.5043741514285405
+    },
+    "scg": {
+      "convergence_epoch": 143,
+      "final_loss": 1.008612757921219
+    },
+    "leapfrog": {
+      "convergence_epoch": 228,
+      "final_loss": 0.9021818439165751
+    }
+  },
+  "gaussian_mixture": {
+    "sgd": {
+      "convergence_epoch": 507,
+      "final_loss": 0.17290248225132623
+    },
+    "scg": {
+      "convergence_epoch": 808,
+      "final_loss": 0.194122776389122
+    },
+    "leapfrog": {
+      "convergence_epoch": 813,
+      "final_loss": 0.19805046319961547
+    }
+  }
+}
